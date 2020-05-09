@@ -25,7 +25,6 @@ export class AppComponent {
     @Inject(PLATFORM_ID) private platformid: Object,
     private renderer: Renderer2
   ){
-    
     this.title = 'Voice Search Demo';
     if(isPlatformServer(this.platformid)){
       const envJson = this.injector.get('CONFIG')? this.injector.get('CONFIG'): {};
@@ -43,13 +42,13 @@ public voiceSearch(){
       const voiceSearchForm = this.formSearch.nativeElement;
       const voiceHandler = this.hiddenSearchHandler.nativeElement;
       
-      vSearch.onresult = function(e){
+      vSearch.onresult = (e)=>{
         voiceHandler.value = e.results[0][0].transcript;
           vSearch.stop();
           console.log(voiceHandler.value);
           this.chatbot.converse(voiceHandler.value)
       }
-      vSearch.onerror = function(e){
+      vSearch.onerror = (e)=>{
           console.log(e);
           vSearch.stop();
       }
