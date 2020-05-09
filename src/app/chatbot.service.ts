@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { ApiAiClient } from 'api-ai-javascript/es6/ApiAiClient'
 import { BehaviorSubject } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 
 export class Message {
@@ -17,21 +18,27 @@ export class Message {
 
 export class ChatbotService {
 
-  readonly token = "195a70973cbd48cfa8916fc64750b935";
-  readonly client = new ApiAiClient({accessToken:this.token});
-  conversation = new BehaviorSubject<Message[]>([]);
 
-  constructor() {}
+baseURL: string ="https://api.dialogflow.com/v1/query?v=20150910";
+token1: string = '195a70973cbd48cfa8916fc64750b935'; // use your token from dialog flow
+
+  constructor(private http: HttpClient){}
+
 
 converse(msg : string)
 {
-  const userMessage = new Message(msg,'user');
-  console.log(userMessage)
-  return this.client.textRequest(msg).then(result=>{
-    const speech =result.result.fulfillment.speech;
-    const botMessage = new Message(speech,'bot');
-    console.log(botMessage)
-    
-  })
-}
+const data = {
+  query: msg,
+  lang: 'en',
+  sessionId: '12345'
+  };
+  let headers = new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${this.token1}` });
+let options = { headers: headers };
+  this.http.post(this.baseURL, data,options ).subscribe(
+  res => {
+  console.log(res)
+  });
+  }
 }

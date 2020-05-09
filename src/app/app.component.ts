@@ -1,21 +1,12 @@
 import { Component, Injector, Inject, PLATFORM_ID, Renderer2, ViewChild } from '@angular/core';
 import { isPlatformServer } from '@angular/common';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
-import { Injectable } from '@angular/core';
-import { ApiAiClient } from 'api-ai-javascript/es6/ApiAiClient'
-import { BehaviorSubject } from 'rxjs';
+
+import {ChatbotService} from './chatbot.service'
 
 const configKey = makeStateKey('CONFIG');
 declare var webkitSpeechRecognition: any;
 
-
-export class Message {
-  constructor(public content :string , public sentBy : string)
-      {
-        
-      }
-
-}
 
 @Component({
   selector: 'app-root',
@@ -27,15 +18,14 @@ export class AppComponent {
   public title : string;
   @ViewChild('gSearch') formSearch;
   @ViewChild('searchKey') hiddenSearchHandler;
-  readonly token = "195a70973cbd48cfa8916fc64750b935";
-  readonly client = new ApiAiClient({accessToken:this.token});
-  conversation = new BehaviorSubject<Message[]>([]);
-  constructor( 
+  
+  constructor( private chatbot: ChatbotService,
     private injector: Injector,
     private state : TransferState,
     @Inject(PLATFORM_ID) private platformid: Object,
     private renderer: Renderer2
   ){
+    
     this.title = 'Voice Search Demo';
     if(isPlatformServer(this.platformid)){
       const envJson = this.injector.get('CONFIG')? this.injector.get('CONFIG'): {};
@@ -52,15 +42,12 @@ public voiceSearch(){
       vSearch.start();
       const voiceSearchForm = this.formSearch.nativeElement;
       const voiceHandler = this.hiddenSearchHandler.nativeElement;
+      
       vSearch.onresult = function(e){
         voiceHandler.value = e.results[0][0].transcript;
           vSearch.stop();
           console.log(voiceHandler.value);
-          return this.client.textRequest(voiceHandler.value).then(result=>{
-            const speech =result.result.fulfillment.speech;
-            const botMessage = new Message(speech,'bot');
-            console.log(botMessage)
-  })
+          this.chatbot.converse(voiceHandler.value)
       }
       vSearch.onerror = function(e){
           console.log(e);

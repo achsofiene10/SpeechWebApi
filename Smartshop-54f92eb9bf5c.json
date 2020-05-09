@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "smartshop-serxou",
+  "private_key_id": "54f92eb9bf5ce1af82ae3966996fa3e9415e8fb0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqGRcu12GG0QG8\nMmH/epmQBu8UGKC/MpoeVdcNnuS7kkgzzbMQz7AFrSr5/nTdhCa81XfPNgivuOpk\nRuOtNqU0t2ZFmVnllySM7VmdyxquEvANfaazmGKTZui/ADbn/HiSgM2MDesnPOz3\nZBF+Hsq5hcByXNjJZZzsusW6RIl/uqOuBQju6unH6iH5ZTKynIvrZYhnw5F5NAkA\nI5uLGb3VxTXRrOr404c78AmZbn5PO4ft8PCPkIe29uERXCCzxn4d45OunjsJC7Qv\nsWwl4WRBTF+X5ICRUJoKXArWZTfhw771X+vx3AwJ6t/2EdIFVlG1ouA8i3wfgZa0\niv+ae38jAgMBAAECggEAUiINZKvRRsTTPqlhUnhDgB0pAh4mOExZyL4QOl53+e5X\neNQhW8O9LfCA6PeqPHAcOGAnGuHvbdIvM75bH39cZEkOVBsJImhJ2NaeyCeTOWyh\nhxIeFWhGaQBu8BNNb9Uj7zHMjo0F+AteLNKf87MwlkZ0N4SHlS/AhzpkUV3Yuth8\nlgugXiYiuQtTvfjGH1Jo0bSfmuLP1Dkwsf+t4PMBsuPJbVnj+R7Er0udMC3rXH23\nDWq6UJ9mhAoGKJqEnhGwa7mZfb06M3uP0PnkBOwfcfSrkmCBJLzNNhaGDKBP4mim\nkuvOZtkUQwFogvfEgvejBy8KUr96JXq109mUI4FB2QKBgQDoMmY8PbNHbPq3GXEz\nDvl2i6eR9MTWl+u0jGND6JgGdQjpyc1tMYOIxBAQHjlKRBbknuRdNLwHY6RPf/Bk\nszxje9G4EQstfGqHRZuFFY8uF30R9KraeTNTh5BjoXyXcfRU8f6ukoDouztBoi5M\nGydrkdi35siftAsLMQ0t0bpBlQKBgQC7iQPkz0IxPjEj6tA/zmlMG7hKDXchyhS7\n8VdzoNlnZ0raF/ok+CDKu9vUJAQDZYVpQXXLAmlV1abtSNWL5U6RUHwIto7OaUVv\ncKs/Vy+oRL9pJoNXmPGp/c1gCjt8X/t6pjDkjtbDt98eBXLFvrlQh41HMvgC8Ykb\nw/STuA//1wKBgAaliq+mxH8C65paLBdeEl4GWWGgNBJAfwrICf9jpRZqOzsV/79k\nb3N2yU7szo8Fq/IXakoQvGEpxQZRjzwStWPTo4k1U7CVoycEIxOILnUPTxE4g7uF\nRKbbdpKjiMF9DZVw5+1vXClNUsDqN5EOJe66Wg3JmWyY5sgHO21YV5CRAoGBALWW\nx6lwMzUBdo3D2mBeW0Fx+fHitf+G8KrH15lEIB9rOmSSIQpZJU+JtiPlt+keDZ/M\n3eV0cVDG77sF8pliscAtwdyiAQfHkY+F9pv/rUrvPrTvsPBKTX8AHjSn08/sFNM/\nR0qZMUYUrjwgpHDr6/8ZMmjF5rba8JttFE9RRFTDAoGBAK8x/ZDb8tEpF/vY/4XY\nNkB+5PlOXXJPCWxYfdVR94xr2+2PIizvZvHkCjafOUEjM0/TxcNcb8n6sN0FyOQl\ntOSbm5pTcBqdK4iXvVN9wZlMhmZeE4JuYjZK6YetgDIqkajt5fbCiZfDQyAe2NGH\nh+cLMxZ78hZbvx7gfZLQbH5V\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflow-ereopy@smartshop-serxou.iam.gserviceaccount.com",
+  "client_id": "109542008605091201567",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-ereopy%40smartshop-serxou.iam.gserviceaccount.com"
+}
